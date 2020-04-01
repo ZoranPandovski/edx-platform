@@ -168,6 +168,8 @@ urlpatterns = [
     url(r'^api/experiments/', include(('experiments.urls', 'lms.djangoapps.experiments'), namespace='api_experiments')),
     url(r'^api/discounts/', include(('openedx.features.discounts.urls', 'openedx.features.discounts'),
                                     namespace='api_discounts')),
+    url(r'^api/jupyter_graded/', include('xblock_jupyter_graded.rest.urls'))
+
 ]
 
 if settings.FEATURES.get('ENABLE_MOBILE_REST_API'):
