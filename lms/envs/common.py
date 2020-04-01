@@ -2545,6 +2545,7 @@ INSTALLED_APPS = [
     # Management of per-user schedules
     'openedx.core.djangoapps.schedules',
     'rest_framework_jwt',
+    'xblock_jupyter_graded'
 ]
 
 ######################### CSRF #########################################
