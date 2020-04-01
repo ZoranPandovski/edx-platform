@@ -143,6 +143,8 @@ urlpatterns = [
 
     url(r'^dashboard/', include('learner_dashboard.urls')),
     url(r'^api/experiments/', include('experiments.urls', namespace='api_experiments')),
+    url(r'^api/jupyter_graded/', include('xblock_jupyter_graded.rest.urls'))
+
 ]
 
 if settings.FEATURES.get('ENABLE_MOBILE_REST_API'):
