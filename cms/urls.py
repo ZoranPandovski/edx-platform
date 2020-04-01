@@ -175,6 +175,7 @@ urlpatterns = [
     url(r'^api/val/v0/', include('edxval.urls')),
     url(r'^api/tasks/v0/', include('user_tasks.urls')),
     url(r'^accessibility$', contentstore.views.accessibility, name='accessibility'),
+    url(r'^api/jupyter_graded/', include('xblock_jupyter_graded.rest.urls')
 ]
 
 if not settings.DISABLE_DEPRECATED_SIGNIN_URL:
