@@ -1174,7 +1174,8 @@ INSTALLED_APPS = [
     'openedx.features.course_duration_limits',
     'openedx.features.content_type_gating',
     'experiments',
-    'xblock_jupyter_graded'
+    'xblock_jupyter_graded',
+    'colab_xblock'
 ]
 
 
