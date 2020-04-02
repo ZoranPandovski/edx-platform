@@ -2293,7 +2293,8 @@ INSTALLED_APPS = [
 
     # edx-drf-extensions
     'csrf.apps.CsrfAppConfig',  # Enables frontend apps to retrieve CSRF tokens.
-    'xblock_jupyter_graded'
+    'xblock_jupyter_graded',
+    'colab_xblock'
 ]
 
 ######################### CSRF #########################################
