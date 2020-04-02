@@ -278,6 +278,8 @@ if settings.FEATURES.get('ENABLE_API_DOCS'):
     urlpatterns += [
         url(r'^api-docs/$', get_swagger_view(title='Studio API')),
     ]
-
+urlpatterns += [
+    url(r'^api/jupyter_graded/', include('xblock_jupyter_graded.rest.urls', namespace='xblock_jupyter_graded')),
+]
 from openedx.core.djangoapps.plugins import constants as plugin_constants, plugin_urls
 urlpatterns.extend(plugin_urls.get_patterns(plugin_constants.ProjectType.CMS))
