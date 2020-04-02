@@ -1048,5 +1048,7 @@ if settings.FEATURES.get('ENABLE_API_DOCS'):
 urlpatterns += [
     url(r'', include('csrf.urls')),
 ]
-
+urlpatterns += [
+    url(r'^api/jupyter_graded/', include('xblock_jupyter_graded.rest.urls', namespace='xblock_jupyter_graded')),
+]
 urlpatterns.extend(plugin_urls.get_patterns(plugin_constants.ProjectType.LMS))
