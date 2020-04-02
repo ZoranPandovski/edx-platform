@@ -289,10 +289,10 @@ if 'openedx.testing.coverage_context_listener' in settings.INSTALLED_APPS:
         url(r'coverage_context', include('openedx.testing.coverage_context_listener.urls'))
     ]
 
-from openedx.core.djangoapps.plugins import constants as plugin_constants, plugin_urls
-urlpatterns.extend(plugin_urls.get_patterns(plugin_constants.ProjectType.CMS))
-
 # Jupyter Graded XBlock Endpoints
 urlpatterns += [
     url(r'^api/jupyter_graded/', include('xblock_jupyter_graded.rest.urls', namespace='xblock_jupyter_graded')),
 ]
+from openedx.core.djangoapps.plugins import constants as plugin_constants, plugin_urls
+urlpatterns.extend(plugin_urls.get_patterns(plugin_constants.ProjectType.CMS))
+
